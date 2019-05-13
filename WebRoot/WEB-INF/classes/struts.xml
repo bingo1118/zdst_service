@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="GBK"?>  
+<!DOCTYPE struts PUBLIC  
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+        "http://struts.apache.org/dtds/struts-2.0.dtd">  
+<struts> 
+
+	<package name="notification" extends="json-default">
+		<action name="videoAlarm" class="com.cloudfire.action.VideoAlarmAction" method="videoAlarm">
+			<result type="json"></result>
+		</action>
+		<action name="addVideo" class="com.cloudfire.action.VideoAlarmAction" method="addVideo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAllParentArea" class="com.cloudfire.action.VideoAlarmAction" method="getAllParentArea">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAreasByParentId" class="com.cloudfire.action.VideoAlarmAction" method="getAreasByParentId">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 判断nfc是否存在 -->
+		<action name="ifNFCExist" class="com.cloudfire.action.NFCAction" method="ifNFCExist">
+			<result type="json"></result>
+		</action>
+		<action name="gotovideo" class="com.cloudfire.action.UtilsAction" method="gotovideo">
+		</action>
+		<action name="getHostInfo" class="com.cloudfire.action.UtilsAction" method="getHostInfo">
+			<result type="json"></result>
+		</action>
+		<!-- shouji denglu jiekou  -->
+		<action name="login" class="com.cloudfire.action.LoginAction" method="login">
+			<result type="json"></result>
+		</action>
+		<action name="HMlogin" class="com.cloudfire.action.LoginAction" method="HMlogin">
+			<result type="json"></result>
+		</action>
+		<!--  huoqu shebei jiekou bu baokuo 5.11.12.13.14.15  -->
+		<action name="getAllSmoke" class="com.cloudfire.action.AllSmokeAction" method="getAllSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedZDSTDev" class="com.cloudfire.action.AllSmokeAction" method="getNeedZDSTDev">
+			<result type="json"></result>
+		</action>
+		
+		
+		<!--  huoqu baohan suoyou shebei zai ditu xianshi,bu baokuo 11.12.13.14.15  -->
+		<action name="getAllDevice" class="com.cloudfire.action.AllSmokeAction" method="getAllDevice">
+			<result type="json"></result>
+		</action>
+		<action name="getRepeaterInfo" class="com.cloudfire.action.AllSmokeAction" method="getRepeaterInfo">
+			<result type="json"></result>
+		</action>
+		<!-- huoqu shexiangtou xinxi,bu baokuo duijie shexiangtou99  -->
+		<action name="getAllCamera" class="com.cloudfire.action.AllCameraAction" method="getAllCamera">
+			<result type="json"></result>
+		</action>
+		<!--add by lzo-->
+		<action name="getAllFaultinfo" class="com.cloudfire.action.AllSmokeAction" method="getAllFaultinfo">
+			<result type="json"></result>
+		</action>
+		<action name="ackControl" class="com.cloudfire.action.AckControlAction" method="ackControl">
+			<result type="json"></result>
+		</action>
+		<action name="set_water_level_Control" class="com.cloudfire.action.AckControlAction" method="set_water_level_Control">
+			<result type="json"></result>
+		</action>
+		<action name="nanjing_ranqi_7020" class="com.cloudfire.action.AckControlAction" method="nanjing_ranqi_7020">
+			<result type="json"></result>
+		</action>
+		<action name="Telegraphy_Uool_control" class="com.cloudfire.action.AckControlAction" method="Telegraphy_Uool_control">
+			<result type="json"></result>
+		</action>
+		<action name="EasyIot_arc_electric" class="com.cloudfire.action.AckControlAction" method="EasyIot_arc_electric">
+			<result type="json"></result>
+		</action>
+		<action name="EasyIot_erasure_control" class="com.cloudfire.action.AckControlAction" method="EasyIot_erasure_control">
+			<result type="json"></result>
+		</action>
+		<action name="set_water_wave_Control" class="com.cloudfire.action.AckControlAction" method="set_water_wave_Control">
+			<result type="json"></result>
+		</action>
+		<action name="EasyIot_Uool_control" class="com.cloudfire.action.AckControlAction" method="EasyIot_Uool_control">
+			<result type="json"></result>
+		</action>
+		<action name="ackControlCvls" class="com.cloudfire.action.AckControlAction" method="ackControlCvls">
+			<result type="json"></result>
+		</action>
+		<action name="EasyIot_Switch_control" class="com.cloudfire.action.AckControlAction" method="EasyIot_Switch_control">
+			<result type="json"></result>
+		</action>
+		<action name="ackNB_IOT_Control" class="com.cloudfire.action.AckControlAction" method="ackNB_IOT_Control">
+			<result type="json"></result>
+		</action>
+		<action name="cancelSound" class="com.cloudfire.action.AckControlAction" method="cancelSound">
+			<result type="json"></result>
+		</action>
+		<action name="resetRepeater" class="com.cloudfire.action.AckControlAction" method="resetRepeater">
+			<result type="json"></result>
+		</action>
+		<action name="getEleNeedHis" class="com.cloudfire.action.AckControlAction" method="getEleNeedHis">
+			<result type="json"></result>
+		</action>
+		<action name="getPlaceTypeId" class="com.cloudfire.action.PlaceTypeIdAction" method="getPlaceTypeId">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAdministrationInfo" class="com.cloudfire.action.PlaceTypeIdAction" method="getNeedAdministrationInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAreaId" class="com.cloudfire.action.AreaIdAction" method="getAreaId">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getDXAreaId" class="com.cloudfire.action.AreaIdAction" method="getDXAreaId">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedSmoke" class="com.cloudfire.action.NeedSmokeAction" method="getNeedSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedDev" class="com.cloudfire.action.NeedSmokeAction" method="getNeedDev">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getTHInfo" class="com.cloudfire.action.NeedSmokeAction" method="getTHInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedLossDev" class="com.cloudfire.action.NeedSmokeAction" method="getNeedLossDev">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedDevice" class="com.cloudfire.action.NeedSmokeAction" method="getNeedDevice">
+			<result type="json"></result>
+		</action>
+		
+		
+		<action name="dealAlarm" class="com.cloudfire.action.DealAlarmAction" method="dealAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="makeSureAlarm" class="com.cloudfire.action.DealAlarmAction" method="makeSureAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="makeSureGetUpload" class="com.cloudfire.action.DealAlarmAction" method="makeSureGetUpload">
+			<result type="json"></result>
+		</action>
+		
+		<action name="dealAlarmDetail" class="com.cloudfire.action.DealAlarmAction" method="dealAlarmDetail">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneSmoke" class="com.cloudfire.action.OneSmokeAction" method="getOneSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="addSmoke" class="com.cloudfire.action.AddSmokeAction" method="addSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="addSmoke_ytr" class="com.cloudfire.action.AddSmokeAction" method="addSmoke_ytr">
+			<result type="json"></result>
+		</action>
+		
+		<action name="addAdministrationInfo" class="com.cloudfire.action.AddSmokeAction" method="addAdministrationInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="addHeiMenSmoke" class="com.cloudfire.action.AddSmokeAction" method="addHeiMenSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAllAlarm" class="com.cloudfire.action.AllAlarmAction" method="getAllAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedAlarm" class="com.cloudfire.action.AllAlarmAction" method="getNeedAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedAlarmMessage" class="com.cloudfire.action.AllAlarmAction" method="getNeedAlarmMessage">
+			<result type="json"></result>
+		</action>
+		
+		<action name="reSetAlarmNum" class="com.cloudfire.action.AllAlarmAction" method="reSetAlarmNum">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getLastestAlarm" class="com.cloudfire.action.AllAlarmAction" method="getLastestAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="addCamera" class="com.cloudfire.action.AddCameraAction" method="addCamera">
+			<result type="json"></result>
+		</action>
+		
+		<action name="bindCameraSmoke" class="com.cloudfire.action.BindCameraSmokeAction" method="bindCameraSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="textAlarm" class="com.cloudfire.action.TextAlarmAction" method="textAlarm">
+			<result type="json"></result> 
+		</action>
+		<action name="textFaultAlarm" class="com.cloudfire.action.TextAlarmAction" method="textFaultAlarm">
+			<result type="json"></result> 
+		</action>
+		
+		<action name="textAlarmAck" class="com.cloudfire.action.TextAlarmAction" method="textAlarmAck">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedLossSmoke" class="com.cloudfire.action.NeedLossSmokeAction" method="getNeedLossSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getSmokeSummary" class="com.cloudfire.action.SmokeSummaryAction" method="getSmokeSummary">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getDevSummary" class="com.cloudfire.action.SmokeSummaryAction" method="getDevSummary">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getDevTypeSummary" class="com.cloudfire.action.SmokeSummaryAction" method="getDevTypeSummary">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getSmokeSummaryTwo" class="com.cloudfire.action.SmokeSummaryAction" method="getSmokeSummaryTwo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAlarmSummary" class="com.cloudfire.action.SmokeSummaryAction" method="getAlarmSummary">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAlarmAllYear" class="com.cloudfire.action.SmokeSummaryAction" method="getAlarmAllYear">
+			<result type="json"></result>
+		</action>
+		
+		<action name="changeCameraPwd" class="com.cloudfire.action.CameraPwdAction" method="changeCameraPwd">
+			<result type="json"></result>
+		</action>
+		
+<!-- 		<action name="getUrlByName" class="com.cloudfire.action.CameraPwdAction" method="getUrlByName">
+            <result type="json"></result>
+        </action> -->
+		
+		<action name="getAllElectricInfo" class="com.cloudfire.action.AllElectricInfoAction" method="getAllElectricInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedElectricInfo" class="com.cloudfire.action.AllElectricInfoAction" method="getNeedElectricInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getElectricTypeInfo" class="com.cloudfire.action.ElectricTypeInfoAction" method="getElectricTypeInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getChuanganHistoryInfo" class="com.cloudfire.action.ElectricTypeInfoAction" method="getChuanganHistoryInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getWaterHistoryInfo" class="com.cloudfire.action.ElectricTypeInfoAction" method="getWaterHistoryInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getGasHistoryInfo" class="com.cloudfire.action.ElectricTypeInfoAction" method="getGasHistoryInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getTHDevInfoHistoryInfo" class="com.cloudfire.action.ElectricTypeInfoAction" method="getTHDevInfoHistoryInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getTime" class="com.cloudfire.action.TimeAction" method="getTime">
+			<result type="json"></result>
+		</action>
+		
+		<action name="bindUserIdIos" class="com.cloudfire.action.BindUserIdIosAction" method="bindUserIdIos">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneElectricInfo" class="com.cloudfire.action.OneElectricInfoAction" method="getOneElectricInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneEnergyEntity" class="com.cloudfire.action.OneElectricInfoAction" method="getOneEnergyEntity">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneChuangAnInfo" class="com.cloudfire.action.OneElectricInfoAction" method="getOneChuangAnInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneTHDeviceInfo" class="com.cloudfire.action.OneElectricInfoAction" method="getOneTHDeviceInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getEquipmentOfOneRepeater" class="com.cloudfire.action.EquipmentOfOneRepeaterAction" method="getEquipmentOfOneRepeater">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAlarmOfRepeater" class="com.cloudfire.action.EquipmentOfOneRepeaterAction" method="getAlarmOfRepeater">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getDvrInfo" class="com.cloudfire.action.DvrInfoAction" method="getDvrInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getDvrInfoByConstructionId" class="com.cloudfire.action.DvrInfoAction" method="getDvrInfoByConstructionId">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getCompanyInfo" class="com.cloudfire.action.AddCompanyAction" method="addCompanyInfo">
+			<result type="dispatcher" name="SUCCESS">/WEB-INF/page/contractor/jianzhudanwei_wodeshebei.jsp</result>
+			<result type="dispatcher" name="ERROR">/WEB-INF/page/contractor/jianzhudanwei_tianjiaxinxi.jsp</result>
+		</action>
+		
+		<action name="toLevenUpFile" class="com.cloudfire.action.LevenUpAction" method="toLevenUpFile">
+			<result type="dispatcher" name="SUCCESS">/WEB-INF/page/contractor/jianzhudanwei_wodeshebei.jsp</result>
+			<result type="dispatcher" name="ERROR">/WEB-INF/page/contractor/jianzhudanwei_tianjiaxinxi.jsp</result>
+		</action>
+		
+		<action name="toLevenUpFiles" class="com.cloudfire.action.LevenUpAction" method="toLevenUpFiles">
+			<result type="dispatcher" name="SUCCESS">/WEB-INF/page/repeater/repeaterInfo.jsp</result>
+			<result type="dispatcher" name="ERROR">/WEB-INF/page/repeater/repeaterInfo.jsp</result>
+		</action>
+		
+		<action name="savePlan" class="com.cloudfire.action.PlanAction" method="addPlan">
+<!-- 		      <result type="dispatcher" name="success">getPlan.do</result> -->
+		</action>
+		
+		<action name="ModifyCompanyInfo" class="com.cloudfire.action.ModifyCompanyAction" method="modifyCompanyInfo">
+		</action>
+		
+		<action name="ModifyFaultInfo" class="com.cloudfire.action.ModifyFaultInfoAction" method="ModifyFaultInfo">
+			<!-- <result type="dispatcher" name="ERROR">/WEB-INF/page/builds/buildingInfos.jsp</result> 
+			<result type="dispatcher" name="SUCCESS">/WEB-INF/page/builds/buildingInfos.jsp</result> -->
+		</action>
+		
+		<action name="addSmokeTwo" class="com.cloudfire.action.AddSmokeTwoAction" method="addSmokeTwo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getSmokeBySearch" class="com.cloudfire.action.GetSmokeBySearchAction" method="getSmokeBySearch">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAlarmPageNumber" class="com.cloudfire.action.GetAlarmPageNumberAction" method="getAlarmPageNumber">
+			<result type ="json"></result>
+		</action>
+		
+		<!-- add by lzz -->
+		<action name="getSecurityInfo" class="com.cloudfire.action.AllEnvironmentAction" method="getAllEnvironment">
+			<result type="json"></result>
+		</action>
+		<action name="getEnvironmentHistory" class="com.cloudfire.action.AllEnvironmentAction" method="getEnvironmentHistory">
+			<result type="json"></result>
+		</action>
+		<action name="getEnvironmentInfo" class="com.cloudfire.action.AllEnvironmentAction" method="getEnvironmentInfo">
+			<result type="json"></result>
+		</action>
+		
+		<!-- tuichu -->
+		<action name="loginOut" class="com.cloudfire.action.LoginOutAction" method="loginOut">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedSecurity" class="com.cloudfire.action.NeedSmokeAction" method="getNeedSecurity">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getSafetyItem" class="com.cloudfire.action.GetSafetyItemAction" method="getStudyItems">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getRuleContentlist" class="com.cloudfire.action.GetSafetyItemAction" method="getRuleContentlist">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getContentlist" class="com.cloudfire.action.GetSafetyItemAction" method="getContentlist">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getStudyRuleItems" class="com.cloudfire.action.GetSafetyItemAction" method="getStudyRuleItems">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getForBiddenObject" class="com.cloudfire.action.GetSafetyItemAction" method="getForBiddenObject">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedEnviDev" class="com.cloudfire.action.NeedSmokeAction" method="getNeedEnviDev">
+			<result type="json"></result>
+		</action>
+
+		
+		<action name="upload" class="com.cloudfire.action.UploadAction">
+	  
+	   <param name="savePath">/upload</param>
+	  	<result>/uploadFileSuccess.jsp</result>  	  
+	  
+	  </action>
+
+		<action name="getNFCInfo" class="com.cloudfire.action.NeedSmokeAction" method="getNFCInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNFCCheakItems" class="com.cloudfire.action.NeedSmokeAction" method="getNFCCheakItems">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNFCRecord" class="com.cloudfire.action.NeedSmokeAction" method="getNFCRecord">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNFCRecordByCondition" class="com.cloudfire.action.NeedSmokeAction" method="getNFCRecordByCondition">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNeedGPSDev" class="com.cloudfire.action.NeedSmokeAction" method="getNeedGPSDev">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneGPSInfo" class="com.cloudfire.action.NeedSmokeAction" method="getOneGPSInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getOneGPSTrace" class="com.cloudfire.action.NeedSmokeAction" method="getOneGPSTrace">
+			<result type="json"></result>
+		</action> 
+		
+		<action name="getNeedElevatorDev" class="com.cloudfire.action.NeedSmokeAction" method="getNeedElevatorDev">
+			<result type="json"></result>
+		</action> 
+		
+		<action name="getOneElevatorDev" class="com.cloudfire.action.NeedSmokeAction" method="getOneElevatorDev">
+			<result type="json"></result>
+		</action> 
+
+		<action name="addNFC" class="com.cloudfire.action.AddSmokeAction" method="addNFC">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getAreaInfo" class="com.cloudfire.action.GetAreasAction" method="getAreaInfo2">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getSmokeBeanInfo" class="com.cloudfire.action.GetAreasAction" method="getSmokeBeanInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="addNFCRecord" class="com.cloudfire.action.AddSmokeAction" method="addNFCRecord">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNFCTrace" class="com.cloudfire.action.NeedSmokeAction" method="getNFCTrace">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNFCSummary" class="com.cloudfire.action.SmokeSummaryAction" method="getNFCSummary">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getNFCDeviceTypeId" class="com.cloudfire.action.PlaceTypeIdAction" method="getNFCDeviceTypeId">
+			<result type="json"></result>
+		</action>
+		<action name="setUserId" class="com.cloudfire.action.UtilsAction" method="setUserId">
+			<result type="json"></result>
+		</action>
+		<action name="updateTxt" class="com.cloudfire.action.UtilsAction" method="updateTxt">
+		      <result type="json"></result>
+		</action>
+		<action name="updateTxt_area" class="com.cloudfire.action.UtilsAction" method="updateTxt_area">
+		      <result type="json"></result>
+		</action>
+		<action name="report-dev-callback" class="com.cloudfire.action.ToolAction" method="uploadDevices">
+			<result type = "json"></result>
+		</action>
+		<action name="deleteDeviceById" class="com.cloudfire.action.ToolAction" method="deleteDeviceById">
+			<result type = "json"></result>
+		</action>
+		<action name="deleteOneNetDevice" class="com.cloudfire.action.OneNetToolAction" method="deleteOneNetDevice">
+            <result type = "json"></result>
+        </action>
+		<action name="nanjing_jiade_cancel" class="com.cloudfire.action.AckControlAction" method="nanjing_jiade_cancel">
+			<result type = "json"></result>
+		</action>
+		<action name="nanjing_set_water_data" class="com.cloudfire.action.AckControlAction" method="nanjing_set_water_data">
+			<result type = "json"></result>
+		</action>
+		<action name="nanjing_set_TempHumi_data" class="com.cloudfire.action.AckControlAction" method="nanjing_set_TempHumi_data">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="nanjing-report-dev-callback" class="com.cloudfire.action.ToolNanJinAction" method="nanjinUploadData">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="nanjing-report-devs-callback" class="com.cloudfire.action.ToolNanJinAction" method="nanjinUploadDatas">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_addDevice" class="com.cloudfire.action.Tool_NanJin_Actions" method="addDevice">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_updateDeviceInfo" class="com.cloudfire.action.Tool_NanJin_Actions" method="updateDeviceInfo">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_deletedDevice" class="com.cloudfire.action.Tool_NanJin_Actions" method="deletedDevice">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_commandConfirmData" class="com.cloudfire.action.Tool_NanJin_Actions" method="commandConfirmData">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_RulEevent" class="com.cloudfire.action.Tool_NanJin_Actions" method="RulEevent">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_DeviceEvent" class="com.cloudfire.action.Tool_NanJin_Actions" method="DeviceEvent">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na_iocm_devNotify_v1.1.0_commandRspData" class="com.cloudfire.action.Tool_NanJin_Actions" method="commandRspData">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="na/iocm/devNotify/v1.1.0/reportCmdExecResult" class="com.cloudfire.action.Tool_NanJin_Actions" method="reportCmdExecResult">
+			<result type = "json"></result>
+		</action>
+		
+		<action name="OneNet-dev-callback" class="com.cloudfire.action.OneNetToolAction" method="uploadDevices">
+			<result type="json"></result>
+		</action>
+		<action name="cmd-response-callback" class="com.cloudfire.action.ToolAction" method="getCommid">
+			<result type = "json"></result>
+		</action>
+		<action name="dev-batch-reg-result" class="com.cloudfire.action.ToolAction" method="registrationCompleted">
+			<result type = "json"></result>
+		</action>
+		<action name="ExportExcel" class="com.cloudfire.action.UtilsAction" method="ExportExcel">
+		</action>
+		<action name="setUpLoraWan" class="com.cloudfire.action.UtilsAction" method="setUpLoraWan">
+			<result type="json"></result>
+		</action>
+		<action name="falushRepeater" class="com.cloudfire.action.UtilsAction" method="falushRepeater">
+		</action>
+		
+		<action name="UploadFileAction" class="com.cloudfire.action.UploadFileAction" method="execute">
+			<result type="json"></result>
+		</action>
+		
+		<action name="UploadFileWebAction" class="com.cloudfire.action.UploadFileWebAction" method="uploadImg">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getImgSrc" class="com.cloudfire.action.UploadFileWebAction" method="getImgSrc">
+			<result type="json"></result>
+		</action>
+		
+		<action name="uploadVideo" class="com.cloudfire.action.UploadFileWebAction" method="uploadVideo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getVideoSrc" class="com.cloudfire.action.UploadFileWebAction" method="getVideoSrc">
+			<result type="json"></result>
+		</action>
+		
+		<action name="AddUserAction" class="com.cloudfire.action.LoginAction" method="register">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getChuangAnData" class="com.cloudfire.action.AckControlAction" method="getChuangAnData">
+			<result type="json"></result>
+		</action>
+
+		
+		<!--   down is elecMeter api by liao zw-->
+		<action name="elecMeterRegister" class="com.cloudfire.action.LoginAction" method="elecMeterRegister">
+			<result type="json"></result>
+		</action>
+		
+		<action name="elecMeterLogin" class="com.cloudfire.action.LoginAction" method="elecMeterLogin">
+			<result type="json"></result>
+		</action>
+		
+		<action name="meterAddDevice" class="com.cloudfire.action.AddSmokeAction" method="meterAddDevice">
+			<result type="json"></result>
+		</action>
+		
+		<action name="elecMeterBindDeviceUser" class="com.cloudfire.action.BindCameraSmokeAction" method="elecMeterBindDeviceUser">
+			<result type="json"></result>
+		</action>
+		
+		<action name="elecMeterGetDeviceByUser" class="com.cloudfire.action.AllSmokeAction" method="elecMeterGetDeviceByUser">
+			<result type="json"></result>
+		</action>
+		
+		<action name="elecMeterGetReadingByMac" class="com.cloudfire.action.AllSmokeAction" method="elecMeterGetReadingByMac">
+			<result type="json"></result>
+		</action>
+		
+		<action name="elecMeterGetSettingByMac" class="com.cloudfire.action.AllSmokeAction" method="elecMeterGetSettingByMac">
+			<result type="json"></result>						
+		</action>
+		
+		<action name="elecMeterSetSettingByMac" class="com.cloudfire.action.AllSmokeAction" method="elecMeterSetSettingByMac">
+			<result type="json"></result>						
+		</action>
+		
+		<action name="elecMeterSendEmail" class="com.cloudfire.action.LoginAction" method="elecMeterSendEmail">
+			<result type="json"></result>
+		</action>
+		
+		<action name="elecMeterCheckEmail" class="com.cloudfire.action.LoginAction" method="elecMeterCheckEmail">
+			<result type="json"></result>
+		</action>
+		<!-- up is elecMeter api by liao zw-->
+
+		
+		<action name="StopAlarm" class="com.cloudfire.action.AllAlarmAction" method="stopAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getWaterAlarmThreshold" class="com.cloudfire.action.AllAlarmAction" method="getWaterAlarmThreshold">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getElectrAlarmThreshold" class="com.cloudfire.action.AllAlarmAction" method="getElectrAlarmThreshold">
+			<result type="json"></result>
+		</action>
+		
+		<action name="getTHAlarmThreshold" class="com.cloudfire.action.AllAlarmAction" method="getTHAlarmThreshold">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ZJlogin" class="com.cloudfire.action.ZJAction" method="ZJlogin">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ZJAddDevice" class="com.cloudfire.action.ZJAction" method="ZJAddDevice">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ZJDeleteDevice" class="com.cloudfire.action.ZJAction" method="ZJDeleteDevice">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ZJSendCommand" class="com.cloudfire.action.ZJAction" method="ZJSendCommand">
+			<result type="json"></result>
+		</action>
+		
+		<action name="ZJSubscribeCallback" class="com.cloudfire.action.ZJAction" method="ZJSubscribeCallback">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXlogin" class="com.cloudfire.action.WXAction" method="login">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetNeedDev" class="com.cloudfire.action.WXAction" method="getNeedDev">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="WXgetNeedLossDev" class="com.cloudfire.action.WXAction" method="getNeedLossDev">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="WXgetDevSummary" class="com.cloudfire.action.WXAction" method="getDevSummary">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetAreaInfo" class="com.cloudfire.action.WXAction" method="getAreaInfo2">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetNeedAlarm" class="com.cloudfire.action.WXAction" method="getNeedAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetAreaId" class="com.cloudfire.action.WXAction" method="getAreaId">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXaddSmoke" class="com.cloudfire.action.WXAction" method="addSmoke">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetLastestAlarm" class="com.cloudfire.action.WXAction" method="getLastestAlarm">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetOneElectricInfo" class="com.cloudfire.action.WXAction" method="getOneElectricInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetRepeaterInfo" class="com.cloudfire.action.WXAction" method="getRepeaterInfo">
+			<result type="json"></result>
+		</action>
+		
+		<action name="WXgetToken" class="com.cloudfire.action.WXAction" method="getToken">
+			<result type="json"></result>
+		</action>
+		<!-- 对接开放的接口开始 -->
+		<!-- 1、用户登录接口 -->
+		<action name="loggingApiJoint" class="com.cloudfire.action.ButtApiJoint" method="loggingApiJoint">
+			<result type="json"></result>
+		</action>
+		<!-- 2、刷新toKen接口 -->
+		<action name="refreshToken" class="com.cloudfire.action.ButtApiJoint" method="refreshToken">
+			<result type="json"></result>
+		</action>
+		<!-- 3、获取区域接口 -->
+		<action name="getAreaIdApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getAreaIdApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 4、获取商业类型接口 -->
+		<action name="getPlaceIdApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getPlaceIdApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 5、获取设备数据接口 -->
+		<action name="getNeedDevApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getNeedDevApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 6、添加设备接口 -->
+		<action name="insertSmokeApiJoint" class="com.cloudfire.action.ButtApiJoint" method="insertSmokeApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 7、获取水压水位数据接口 -->
+		<action name="getWaterApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getWaterApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 8、获取单个电气数据接口 -->
+		<action name="getOneElectricApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getOneElectricApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 9、获取单个电气属性接口 -->
+		<action name="getElectricApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getElectricApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 10、获取报警数据接口 -->
+		<action name="getAlarmApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getAlarmApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 11、获取温湿度数据接口 -->
+		<action name="getTHDevApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getTHDevApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 12、添加声光绑定烟感接口 -->
+		<action name="setSoundSmokeApiJoint" class="com.cloudfire.action.ButtApiJoint" method="setSoundSmokeApiJoint">
+			<result type="json"></result>
+		</action>
+		<!-- 结束 -->
+		
+
+	</package> 
+	
+	<package name="apiaction" extends="json-default" namespace = "/api"> 
+	<!-- APIControl --> 
+		<action name="verifyBuildingId" class="com.cloudfire.action.APIforControl" method="verifyBuildingId">
+            <result type="json"></result>
+        </action> 
+		<action name="addBuilding" class="com.cloudfire.action.APIforControl" method="addBuilding"> 
+            <result type="json"></result>
+        </action>
+		<action name="deleteBuilding" class="com.cloudfire.action.APIforControl" method="deleteBuilding"> 
+            <result type="json"></result>
+        </action>
+		<action name="updateBuilding" class="com.cloudfire.action.APIforControl" method="updateBuilding"> 
+            <result type="json"></result>
+        </action>
+        <action name="getBuilding" class="com.cloudfire.action.APIforControl" method="getBuildingInfo"> 
+            <result type="json"></result>
+        </action>
+		<action name="addCompany" class="com.cloudfire.action.APIforControl" method="addCompany"> 
+            <result type="json"></result>
+        </action>
+		<action name="deleteCompany" class="com.cloudfire.action.APIforControl" method="deleteCompany"> 
+            <result type="json"></result>
+        </action>
+		<action name="updateCompany" class="com.cloudfire.action.APIforControl" method="updateCompany"> 
+            <result type="json"></result>
+        </action>
+        <action name="getCompany" class="com.cloudfire.action.APIforControl" method="getCompanyInfo">
+            <result type="json"></result>
+        </action> 
+		<action name="getAllCompany" class="com.cloudfire.action.APIforControl" method="getAllCompany">
+            <result type="json"></result>
+        </action>
+		<action name="verifyCompanyId" class="com.cloudfire.action.APIforControl" method="verifyCompanyId">
+            <result type="json"></result>
+        </action> 
+		<action name="addOrUpdateEquipment" class="com.cloudfire.action.APIforControl" method="addOrUpdateEquipment"> 
+            <result type="json"></result>
+        </action>
+		<action name="deleteEquipment" class="com.cloudfire.action.APIforControl" method="deleteEquipment"> 
+            <result type="json"></result>
+        </action>
+		<action name="updateEquipment" class="com.cloudfire.action.APIforControl" method="updateEquipment"> 
+            <result type="json"></result>
+        </action>
+        <action name="getEquipment" class="com.cloudfire.action.APIforControl" method="getEquipment">
+            <result type="json"></result>
+        </action> 
+        <action name="getStatistics" class="com.cloudfire.action.APIforControl" method="getStatistics">
+            <result type="json"></result>
+        </action>
+        <action name="getPublicKey" class="com.cloudfire.action.APIAuthAction" method="getPublicKey"> 
+            <result type="json"></result> 
+        </action>
+        <action name="getPrivateKey" class="com.cloudfire.action.APIAuthAction" method="getPrivateKey"> 
+            <result type="json"></result> 
+        </action> 
+        <action name="getEncodedPassword" class="com.cloudfire.action.APIAuthAction" method="getEncodedPassword"> 
+            <result type="json"></result> 
+        </action> 
+        <action name="login" class="com.cloudfire.action.APIAuthAction" method="login">
+            <result type="json"></result>
+        </action>
+		<action name="getAllCompany" class="com.cloudfire.action.APIforControl" method="getAllCompany">
+            <result type="json"></result>
+        </action>
+		<action name="getAllBuilding" class="com.cloudfire.action.APIforControl" method="getAllBuilding">
+            <result type="json"></result>
+        </action>
+		<action name="getAllCity" class="com.cloudfire.action.APIforControl" method="getAllCity">
+            <result type="json"></result>
+        </action>
+		<action name="getAllSystem" class="com.cloudfire.action.APIforControl" method="getAllSystem">
+            <result type="json"></result>
+        </action>
+		<action name="selectCountry" class="com.cloudfire.action.APIforControl" method="selectCountry">
+            <result type="json"></result>
+        </action>
+		<action name="selectTown" class="com.cloudfire.action.APIforControl" method="selectTown">
+            <result type="json"></result>
+        </action>
+		<action name="getAllBuildingType" class="com.cloudfire.action.APIforControl" method="getAllBuildingType">
+            <result type="json"></result>
+        </action>
+	</package>
+	
+	<constant name="struts.multipart.parser" value="jakarta">
+	</constant>
+	
+	<constant name="struts.multipart.maxSize" value="20971520" />
+  
+	<constant name="struts.custom.i18n.resources"
+ 		 value="globalMessages" />
+	
+	
+	
+	 
+
+</struts> 

@@ -1,0 +1,18 @@
+@charset "utf-8";
+body{font-family:"宋体",arial;margin:0;padding:0;background:#fff;font-size:12px;color:#000}
+div,form,img,ul,ol,li,dl,dt,dd{margin:0;padding:0;border:0}
+li{list-style:none;list-style-position:outside}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px}
+
+/* 遮罩层 */
+#maskLayer{position: absolute;left:0px;top:0px}
+#alphadiv{}
+#drag{z-index: 2001;width:100%;}
+#drag_h{line-height:28px;height:28px;cursor:move;color:#fff;background:#D01A22;border-bottom:1px dashed #babcbc;padding:0 10px}
+#drag h3 b{float:left}
+#drag h3 span{font-weight:normal;float:right;cursor:pointer}
+
+#sublist{position:absolute;z-index:2100;background:#fff}
+.check{background-image: url(../images/chk_off.gif);}
+body .chkON{background-image: url(../images/chk_on.gif);}
+

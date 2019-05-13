@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能监控</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+</head>
+
+<body class="clearfix">
+<div class="container">
+    <div class="content clearfix">
+    	<div class="content_left fl">
+        	<div class="title">设备状态</div>
+            <ul class="fenlei">
+            	<li class="xitong">
+                	<span>消防水系统</span>
+                	<ul>
+                    	<li>
+                        	<a href="" class="active">消防水池</a>
+                        </li>
+                        <li>
+                        	<a href="">消防水箱</a>
+                        </li>
+                        <li>
+                        	<a href="">消防水泵</a>
+                        </li>
+                        <li>
+                        	<a href="">水泵接合器</a>
+                        </li>
+                        <li>
+                        	<a href="">进水管</a>
+                        </li>
+                        <li>
+                        	<a href="">水枪</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="xitong">
+                	<span>消防电系统</span>
+                	<ul>
+                    	<li>
+                        	<a href="">消防电梯</a>
+                        </li>
+                        <li>
+                        	<a href="">防烟排烟电动防火门</a>
+                        </li>
+                        <li>
+                        	<a href="">防烟排烟电动卷帘</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="xitong">
+                	<span>电气火灾报警系统</span>
+                	<ul>
+                    	<li>
+                        	<a href="">电气火灾监控主机</a>
+                        </li>
+                        <li>
+                        	<a href="">电气火灾监控探测器</a>
+                        </li>
+                        <li>
+                        	<a href="">电流探测器</a>
+                        </li>
+                        <li>
+                        	<a href="">温度传感器</a>
+                        </li>
+                        <li>
+                        	<a href="">总线隔离器</a>
+                        </li>
+                        <li>
+                        	<a href="">电压探测器</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="xitong">
+                	<span>火灾自动报警系统</span>
+                	<ul>
+                    	<li>
+                        	<a href="">感烟探测器</a>
+                        </li>
+                        <li>
+                        	<a href="">感温探测器</a>
+                        </li>
+                        <li>
+                        	<a href="">火焰探测器</a>
+                        </li>
+                        <li>
+                        	<a href="">手动按钮报警器</a>
+                        </li>
+                        <li>
+                        	<a href="">报警主机</a>
+                        </li>
+                        <li>
+                        	<a href="">联动控制器</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="xitong">
+                	<span>消防应急疏散系统</span>
+                	<ul>
+                    	<li>
+                        	<a href="">安全应急通道</a>
+                        </li>
+                        <li>
+                        	<a href="">消防应急照明灯</a>
+                        </li>
+                        <li>
+                        	<a href="">消防应急标志</a>
+                        </li>
+                        <li>
+                        	<a href="">火灾自动报警系统</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="xitong">
+                	<span>视频监控系统</span>
+                	<ul>
+                    	<li>
+                        	<a href="">监控摄像头</a>
+                        </li>
+                        <li>
+                        	<a href="">云台</a>
+                        </li>
+                        <li>
+                        	<a href="">视频服务器</a>
+                        </li>
+                        <li>
+                        	<a href="">硬盘录像机</a>
+                        </li>
+                        <li>
+                        	<a href="">显示设备</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="content_right fr">
+        	<div class="content_search">
+            <form>
+            	<label>区域管理终端mac：
+                	<input type="text" placeholder="请输入"/>
+                </label>
+                <label>烟感mac：
+                	<input type="text" placeholder="请输入"/>
+                </label>
+                <label>区域ID：
+                	<input type="text" placeholder="请输入"/>
+                </label>
+                <label>区域名称：
+                	<input type="text" placeholder="请输入"/>
+                </label>
+                <label style="position:relative; left:15px; ">
+                    <button class="ser"></button>
+                </label>
+            </form>
+            </div>
+            <div class="content_table">
+            	<div class="dydc">
+                    <a href="javascript:void(0);" id="print">打印</a>
+                    |
+                    <a href="javascript:void(0);" id="daochu">导出</a>
+           		</div>
+            	<table id="idData">
+                	<tr>
+                    	<th>序号</th>
+                        <th>区域管理终端mac</th>
+                        <th>烟感mac</th>
+                        <th>所属区域</th>
+                        <th>添加时间</th>
+                        <th>心跳时间</th>
+                        <th>区域管理终端状态</th>
+                        <th>烟感状态</th>
+                    </tr>
+                    
+                    <tr>
+                    	<td>01</td>
+                        <td>天力物业</td>
+                        <td>天河区农信大厦</td>
+                        <td>一栋八层</td>
+                        <td><a href="">楼层平面图</a></td>
+                        <td>XUUIO6</td>
+                        <td>正常</td>
+                        <td>2017/01/03</td>
+                    </tr>
+
+                </table>
+                <div class="ul_pagenav" style="text-align:center;"> 
+                     <ul id="record"></ul> 
+                     <ul class="pagination" id="pagination"> 
+                            
+                     </ul>  
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/jsfenye.js"></script>
+<script language="javascript" src="js/jquery.jqprint.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript"> 
+		$(document).ready(function() { 
+			$("#print").click(function(){ 
+				$(".content_table table").jqprint(); 
+			}); 
+		}); 
+</script> 
+<script src="js/Blob.js"></script>
+<script src="js/FileSaver.min.js"></script>
+<script src="js/ExportUtil.js"></script>
+<script>
+		$(function(){
+			$("#daochu").click(function(){
+				ExportUtil.toExcel("idData");	
+			});	
+		});
+</script>
+

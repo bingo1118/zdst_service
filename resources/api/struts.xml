@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="GBK"?>  
+<!DOCTYPE struts PUBLIC  
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+        "http://struts.apache.org/dtds/struts-2.0.dtd">  
+<struts> 
+
+	<package name="notification" extends="json-default">
+		<!-- 对接开放的接口开始 -->
+		<!-- 1、用户登录接口 -->
+		<action name="loggingApiJoint" class="com.cloudfire.action.ButtApiJoint" method="loggingApiJoint">
+			<result type="json"></result>
+		</action>
+		<!-- 2、刷新toKen接口 -->
+		<action name="refreshToken" class="com.cloudfire.action.ButtApiJoint" method="refreshToken">
+			<result type="json"></result>
+		</action>
+		<!-- 3、获取区域接口 -->
+		<action name="getAreaIdApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getAreaIdApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 4、获取商业类型接口 -->
+		<action name="getPlaceIdApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getPlaceIdApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 5、获取设备数据接口 -->
+		<action name="getNeedDevApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getNeedDevApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 6、添加设备接口 -->
+		<action name="insertSmokeApiJoint" class="com.cloudfire.action.ButtApiJoint" method="insertSmokeApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 7、获取水压水位数据接口 -->
+		<action name="getWaterApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getWaterApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 8、获取单个电气数据接口 -->
+		<action name="getOneElectricApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getOneElectricApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 9、获取单个电气属性接口 -->
+		<action name="getElectricApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getElectricApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 10、获取报警数据接口 -->
+		<action name="getAlarmApiJoint" class="com.cloudfire.action.ButtApiJoint" method="getAlarmApiJoint">
+			<result type="json"></result>
+		</action>
+		
+		<!-- 结束 -->
+
+	</package> 
+	
+	<constant name="struts.multipart.parser" value="jakarta">
+	</constant>
+	
+	<constant name="struts.multipart.maxSize" value="20971520" />
+  
+	<constant name="struts.custom.i18n.resources"
+ 		 value="globalMessages" />
+
+</struts> 
